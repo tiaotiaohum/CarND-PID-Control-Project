@@ -3,6 +3,34 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
+## Introduction
+In this project I implemented a PID controller in C++ to maneuver the vehicle around a track in udacity simulator!
+
+The simulator provides the cross track error (CTE) and the velocity (mph) in order to compute the appropriate steering angle.
+
+PID stands for Proportional-Integral-Derivative. 
+
+
+## Effect of Each Component in PID controller
+### Component P
+The component P provides the control signal, which is proportional to the CTE. It means, how quick the controller shall react to the CTE. If P is too small the vehicle will not have enough steering angle. If P is too big the vehicle will execute too big steering angle. 
+I tried to only use the P component. But a oscillation behavior is observed. 
+[video for PID Conduction with Only P Component](https://www.youtube.com/watch?v=PKbWSl0D-W4)
+
+### Component I
+The component I provides the control signal, which is related to the integration of the CTE. The I component I reacts slowlier then the P component. Always I use it to deal with static error.
+
+### Component D
+The component I provides the control signal, which is related to the derivation of the CTE. In this project D represents the difference between the current CTE and the last CTE.
+
+In the project I used the following formular to compute the steering_angle
+steering_angle = - (Kp * P + Ki * I + Kd * D)
+
+## Choossing the Final Hyperparameters
+
+
+
+
 ## Dependencies
 
 * cmake >= 3.5
