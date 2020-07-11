@@ -19,9 +19,13 @@ I tried to only use the P component. But a oscillation behavior is observed.
 
 ### Component I
 The component I provides the control signal, which is related to the integration of the CTE. The I component I reacts slowlier then the P component. Always I use it to deal with static error.
+In the following video, I used only I component, the vehicle can correct the steering angle error. But the correction seems not fast enough.
+[video for PID Conduction with Only I Component](https://www.youtube.com/watch?v=7PyCf5zXiJE)
 
 ### Component D
 The component I provides the control signal, which is related to the derivation of the CTE. In this project D represents the difference between the current CTE and the last CTE.
+In the following video, the vehicle can not drive itself only with the D component. 
+[video for PID Conduction with Only I Component](https://www.youtube.com/watch?v=jbXF_Or4s9s)
 
 In the project I used the following formular to compute the steering_angle
 steering_angle = - (Kp * P + Ki * I + Kd * D)
