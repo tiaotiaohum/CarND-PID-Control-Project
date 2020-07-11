@@ -31,6 +31,8 @@ In the project I used the following formular to compute the steering_angle
 steering_angle = - (Kp * P + Ki * I + Kd * D)
 
 ## Choossing the Final Hyperparameters
+I manually choosed the parameter according the simulation result.
+
 
 
 
