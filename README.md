@@ -35,7 +35,7 @@ I manually choosed the parameter according the simulation result.
 Firstly, I choosed the parameter Kp=0.06, Ki=0.00030, Kd=1.28. But when the vehicle faced the sharp right turn, the left front wheel was bumped up. 
 ![alt text](examples/bumped_up_wheel.png)
 So I increased the Kp to 0.09. The result was not really acceptable. The tires leaved a little bit the drivable area.
-![alt text](examples/not_in_drivable_area)
+![alt text](examples/not_in_drivable_area.png)
 At last, I increased the Kp to 0.12. The vehicle could drive along the track and stayed in the drivable area. 
 
 ## Dependencies
