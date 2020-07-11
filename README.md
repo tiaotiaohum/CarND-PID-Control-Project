@@ -5,11 +5,11 @@ Self-Driving Car Engineer Nanodegree Program
 
 ## Introduction
 In this project I implemented a PID controller in C++ to maneuver the vehicle around a track in udacity simulator!
+![alt text](examples/PID_example_PID.png)
 
 The simulator provides the cross track error (CTE) and the velocity (mph) in order to compute the appropriate steering angle.
 
 PID stands for Proportional-Integral-Derivative. 
-
 
 ## Effect of Each Component in PID controller
 ### Component P
@@ -33,12 +33,10 @@ steering_angle = - (Kp * P + Ki * I + Kd * D)
 ## Choossing the Final Hyperparameters
 I manually choosed the parameter according the simulation result.
 Firstly, I choosed the parameter Kp=0.06, Ki=0.00030, Kd=1.28. But when the vehicle faced the sharp right turn, the left front wheel was bumped up. 
-
-So I increased the Kp to 0.09. The result was not really acceptable.
+![alt text](examples/bumped_up_wheel.png)
+So I increased the Kp to 0.09. The result was not really acceptable. The tires leaved a little bit the drivable area.
+![alt text](examples/not_in_drivable_area)
 At last, I increased the Kp to 0.12. The vehicle could drive along the track and stayed in the drivable area. 
-
-
-
 
 ## Dependencies
 
